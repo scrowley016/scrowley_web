@@ -4,9 +4,9 @@ import {connect} from 'react-redux'
 export default class Resume extends Component {
   render() {
     return (
-      <div className="container">
+      <div>
         <div className="pdf">
-          <embed src="scres.pdf" />
+          <embed src="scres.pdf" height="1000em" width="100%" />
         </div>
       </div>
     )
