@@ -5,8 +5,12 @@ export default class Resume extends Component {
   render() {
     return (
       <div>
-        <div className="pdf">
-          <embed src="scres.pdf" height="1000em" width="100%" />
+        <div className="stars">
+          <div className="twinkling">
+            <div className="pdf">
+              <embed src="scres.pdf" height="1000em" width="100%" />
+            </div>
+          </div>
         </div>
       </div>
     )

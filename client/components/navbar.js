@@ -6,40 +6,42 @@ import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
-    <nav>
-      {isLoggedIn ? (
-        <div>
-          {/* The navbar will show these links after you log in */}
-          <Link to="/home">Home</Link>
-          <a href="#" onClick={handleClick}>
-            Logout
-          </a>
-        </div>
-      ) : (
-        <div>
-          {/* The navbar will show these links before you log in */}
-          <div className="starsnav">
-            <div className="twinklingnav">
-              <div className="cloudsnav">
-                <Link class="link" to="aboutme">
-                  About Me
-                </Link>
-                <Link class="link" to="projects">
-                  Projects
-                </Link>
-                <Link class="link" to="contact">
-                  Contact
-                </Link>
-                <Link class="link" to="resume">
-                  Resume
-                </Link>
-              </div>
+    <div className="starsnav">
+      <div className="twinklingnav">
+        {/* <div className="cloudsnav"> */}
+        <div className="navtitle">Shannon Crowley</div>
+        <div className="navtitleTwo">Full Stack Software Developer</div>
+        <nav>
+          {isLoggedIn ? (
+            <div>
+              {/* The navbar will show these links after you log in */}
+              <Link to="/home">Home</Link>
+              <a href="#" onClick={handleClick}>
+                Logout
+              </a>
             </div>
-          </div>
-        </div>
-      )}
-    </nav>
-    <hr />
+          ) : (
+            <div>
+              {/* The navbar will show these links before you log in */}
+
+              <Link class="link" to="aboutme">
+                About Me
+              </Link>
+              <Link class="link" to="projects">
+                Projects
+              </Link>
+              <Link class="link" to="contact">
+                Contact
+              </Link>
+              <Link class="link" to="resume">
+                Resume
+              </Link>
+            </div>
+          )}
+        </nav>
+      </div>
+    </div>
+    {/* </div> */}
   </div>
 )
 

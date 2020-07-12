@@ -9,12 +9,60 @@ async function seed() {
 
   const project = await Promise.all([
     Project.create({
-      title: 'Grace Shopper',
+      title: 'Portfolio Website',
+      technology: 'NERD Stack',
+      shortDescription:
+        'Worked with a team of 4 to create an e-commerce site to sell puzzles',
+      longDescription: 'meow,meow,meow',
+      dates: 'July 2020',
+      role: 'Full Stack developer',
+      linkGithub: 'www.meow.com',
+      linkWebsite: 'PuzzleParty.com',
+      image: ' insert here'
+    }),
+    Project.create({
+      title: 'Puzzle Party',
       technology: 'NERD Stack',
       shortDescription:
         'Worked with a team of 4 to create an e-commerce site to sell puzzles',
       longDescription: 'meow,meow,meow',
       dates: 'April 2020',
+      role: 'Full Stack developer',
+      linkGithub: 'www.meow.com',
+      linkWebsite: 'PuzzleParty.com',
+      image: ' insert here'
+    }),
+    Project.create({
+      title: 'Chef Remy',
+      technology: 'NERD Stack',
+      shortDescription:
+        'Worked with a team of 4 to create an Alexa Skill and accompanying web application',
+      longDescription: 'meow,meow,meow',
+      dates: 'May 2020',
+      role: 'Full Stack developer',
+      linkGithub: 'www.meow.com',
+      linkWebsite: 'PuzzleParty.com',
+      image: ' insert here'
+    }),
+    Project.create({
+      title: 'Hangry Hangry Campers',
+      technology: 'Unity,C#',
+      shortDescription:
+        'Worked with a team of 4 to create an e-commerce site to sell puzzles',
+      longDescription: 'meow,meow,meow',
+      dates: 'April 2020',
+      role: 'Full Stack developer',
+      linkGithub: 'www.meow.com',
+      linkWebsite: 'PuzzleParty.com',
+      image: ' insert here'
+    }),
+    Project.create({
+      title: 'Arrest Alert',
+      technology: 'NERD Stack',
+      shortDescription:
+        'Worked with a team of 4 during Hack for Black Lives Matter to create a location based web application',
+      longDescription: 'meow,meow,meow',
+      dates: 'June 2020',
       role: 'Full Stack developer',
       linkGithub: 'www.meow.com',
       linkWebsite: 'PuzzleParty.com',

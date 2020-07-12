@@ -34,46 +34,48 @@ export default class Contact extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="title">
-          <h2>Contact Page</h2>
-          <h3> Please fill out the form below to contact Shannon</h3>
-        </div>
-        <div>
-          <form onSubmit={this.handleSubmit}>
+      <div className="stars">
+        <div className="twinkling">
+          <div className="container">
+            <div className="contacttitle">
+              <h2>Contact Page</h2>
+              <h3> Please fill out the form below to contact Shannon</h3>
+            </div>
             <div>
-              <div>
-                Name:
-                <input
-                  type="text"
-                  name="name"
-                  value={this.state.name}
-                  onChange={this.handleChange}
-                />
-              </div>
-              <div>
-                Email:
-                <input
-                  type="email"
-                  name="email"
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                />
-              </div>
-              <div>
-                Message:
-                <input
-                  type="text"
-                  name="message"
-                  value={this.state.message}
-                  onChange={this.handleChange}
-                />
-              </div>
+              <form onSubmit={this.handleSubmit}>
+                <div>
+                  <div className="contactText">
+                    Name:
+                    <input
+                      type="text"
+                      name="name"
+                      value={this.state.name}
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div>
+                    Email:
+                    <input
+                      type="email"
+                      name="email"
+                      value={this.state.email}
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div>
+                    Message:
+                    <input
+                      type="text"
+                      name="message"
+                      value={this.state.message}
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                </div>
+                <button type="button">send</button>
+              </form>
             </div>
-            <div className="button">
-              <button type="submit">Send</button>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     )
