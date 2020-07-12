@@ -36,16 +36,16 @@ export default class Contact extends Component {
     return (
       <div className="stars">
         <div className="twinkling">
+          <div className="contacttitle">
+            <h2>Contact Page</h2>
+            <h3> Please fill out the form below</h3>
+          </div>
           <div className="container">
-            <div className="contacttitle">
-              <h2>Contact Page</h2>
-              <h3> Please fill out the form below to contact Shannon</h3>
-            </div>
             <div>
               <form onSubmit={this.handleSubmit}>
                 <div>
                   <div className="contactText">
-                    Name:
+                    <h4>Name:</h4>
                     <input
                       type="text"
                       name="name"
@@ -54,7 +54,7 @@ export default class Contact extends Component {
                     />
                   </div>
                   <div>
-                    Email:
+                    <h4>Email:</h4>
                     <input
                       type="email"
                       name="email"
@@ -63,16 +63,16 @@ export default class Contact extends Component {
                     />
                   </div>
                   <div>
-                    Message:
+                    <h4>Message:</h4>
                     <input
-                      type="text"
+                      type="message"
                       name="message"
                       value={this.state.message}
                       onChange={this.handleChange}
                     />
                   </div>
                 </div>
-                <button type="button">send</button>
+                <button type="submit">send</button>
               </form>
             </div>
           </div>

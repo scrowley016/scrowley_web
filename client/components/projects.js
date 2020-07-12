@@ -15,7 +15,11 @@ export class Projects extends Component {
       <div>
         <h2>Projects Page</h2>
         {this.props.project &&
-          this.props.project.map(pro => <div key={pro.id}>{pro.title}</div>)}
+          this.props.project.map(pro => (
+            <div key={pro.id} className="allprojectSingle">
+              {pro.title}
+            </div>
+          ))}
       </div>
     )
   }

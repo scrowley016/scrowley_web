@@ -9,6 +9,7 @@ body {
 
 /* CONTACT BUTTON */
 button {
+  font-family: Orbitron;
   display: inline-block;
   background-color: #5a378a;
   border-radius: 10px;
@@ -17,7 +18,7 @@ button {
   text-align: center;
   font-size: 28px;
   padding: 20px;
-  width: 200px;
+  width: 150px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -26,6 +27,27 @@ button {
   margin: 5px;
 }
 button:hover {
+  background-color: rgb(145, 145, 233);
+}
+link {
+  font-family: Orbitron;
+  display: inline-block;
+  background-color: #5a378a;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 150px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+link:hover {
   background-color: rgb(145, 145, 233);
 }
 
@@ -51,8 +73,22 @@ nav a {
 form div {
   margin: 1em;
   display: inline-block;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
+
 input[type='text'],
+select,
+textarea {
+  width: 60vw;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+input[type='message'],
 select,
 textarea {
   width: 100%;
@@ -61,6 +97,7 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+  height: 8em;
 }
 input[type='email'],
 select,
@@ -73,11 +110,6 @@ textarea {
   resize: vertical;
 }
 /* Style the container */
-.container {
-  border-radius: 5px;
-  background-color: #000000;
-  padding: 20px;
-}
 .container nav {
   border-radius: 5px;
   background-color: #ffffff;
@@ -97,6 +129,13 @@ textarea {
 }
 
 /* CONTACT PAGE */
+.container {
+  /* border-radius: 5px; */
+  background-color: #000000;
+  /* padding: 20px; */
+  display: flex;
+  justify-content: center;
+}
 .contacttitle {
   margin: auto;
   padding: 10px;
@@ -119,6 +158,7 @@ textarea {
   font-family: Orbitron;
   color: #ffffff;
   font-size: 25px;
+  padding-bottom: 0.5em;
 }
 
 /* ABOUT ME */
@@ -139,7 +179,7 @@ textarea {
   font-family: Orbitron;
   color: #ffffff;
   font-size: 200%;
-  padding-top: 1em;
+  padding-top: 2em;
 }
 .aboutbody {
   font-family: Roboto;
@@ -149,6 +189,13 @@ textarea {
   width: 40vw;
   /* border-left: 4px dotted white; */
   justify-content: flex-end;
+}
+
+/* PROJECT PAGE */
+.allprojectSingle {
+  border: 2px dotted white;
+  padding: 1em;
+  margin: 1em;
 }
 
 /* ==============================================================================================
