@@ -32,7 +32,7 @@ class SingleProject extends React.Component {
 
                 <div className="proTitleSin">{single.title}</div>
 
-                <div className="proTitleSin">Dates:{single.dates}</div>
+                <div className="proShortSin">Dates:{single.dates}</div>
 
                 <div className="proShortSin">My Role: {single.role}</div>
                 <div className="proShortSin">

@@ -726,7 +726,7 @@ var SingleProject = /*#__PURE__*/function (_React$Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "proTitleSin"
       }, single.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "proTitleSin"
+        className: "proShortSin"
       }, "Dates:", single.dates), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "proShortSin"
       }, "My Role: ", single.role), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
