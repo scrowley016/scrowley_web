@@ -422,16 +422,16 @@ var Navbar = function Navbar(_ref) {
     href: "#",
     onClick: handleClick
   }, "Logout")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-    "class": "link",
+    className: "link",
     to: "aboutme"
   }, "About Me"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-    "class": "link",
+    className: "link",
     to: "projects"
   }, "Projects"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-    "class": "link",
+    className: "link",
     to: "contact"
   }, "Contact"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-    "class": "link",
+    className: "link",
     to: "resume"
   }, "Resume"))))));
 };
