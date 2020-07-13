@@ -10,3 +10,16 @@ router.get('/', async (req, res, next) => {
     next(err)
   }
 })
+
+router.get('/:id', async (req, res, next) => {
+  try {
+    const data = await Project.findByPk(req.params.id)
+    if (data) {
+      res.json(data)
+    } else {
+      res.status(404).send('Hmmmm....Cant find it')
+    }
+  } catch (err) {
+    next(err)
+  }
+})

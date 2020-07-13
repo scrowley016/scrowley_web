@@ -240,7 +240,6 @@ textarea {
   max-width: 400px;
   height: auto;
   border: 1px solid white;
-  margin: 4px;
 }
 .proTitle {
   font-family: Roboto;
@@ -251,6 +250,34 @@ textarea {
   padding-top: 0.5em;
 }
 .proShort {
+  font-family: Roboto;
+  color: #ffffff;
+  font-size: 14px;
+  padding-top: 0.5em;
+}
+
+/* SINGLE PROJECT */
+.single {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: inline-block;
+}
+.proImageSin {
+  justify-content: center;
+  border: 1px solid white;
+  width: '560';
+  height: '315';
+}
+.proTitleSin {
+  font-family: Roboto;
+  color: #ffffff;
+  font-size: 24px;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+.proShortSin {
   font-family: Roboto;
   color: #ffffff;
   font-size: 14px;

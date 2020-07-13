@@ -20,7 +20,7 @@ async function seed() {
       linkGithub: 'https://github.com/scrowley016/scrowley_web',
       linkWebsite: 'scrowley.com',
       image: 'scrowleyWeb.png',
-      video: ' insert here'
+      video: 'https://www.youtube.com/embed/3cYBfuphkuE'
     }),
     Project.create({
       title: 'Puzzle Party',
@@ -36,7 +36,7 @@ async function seed() {
       linkGithub: 'https://github.com/PuzzleParty/PuzzleParty',
       linkWebsite: 'https://puzzle-party.herokuapp.com/',
       image: 'pparty.png',
-      video: 'insert here'
+      video: 'https://www.youtube.com/embed/MaXD4tSRagc'
     }),
     Project.create({
       title: 'Chef Remy',
@@ -52,7 +52,7 @@ async function seed() {
       linkGithub: 'https://github.com/GHP-Warpaint/remi',
       linkWebsite: 'https://chef-remy.herokuapp.com/',
       image: 'chefRemy.png',
-      video: 'https://www.youtube.com/watch?v=S7irXCy6GfI&t=28s'
+      video: 'https://www.youtube.com/embed/S7irXCy6GfI'
     }),
     Project.create({
       title: 'Hangry Hangry Campers',
@@ -79,7 +79,7 @@ async function seed() {
       linkGithub: 'https://github.com/arrest-alert/arrest-alert',
       linkWebsite: 'coming soon!',
       image: 'aAlert.png',
-      video: 'https://youtu.be/u-VfgRZ8Atohttps://youtu.be/u-VfgRZ8Ato'
+      video: 'https://www.youtube.com/embed/u-VfgRZ8Ato'
     })
   ])
   console.log(`seeded successfully`)

@@ -19,7 +19,7 @@ export class Projects extends Component {
           {this.props.project &&
             this.props.project.map(pro => (
               <div key={pro.id} className="allprojectSingle">
-                <Link to={`/projects/${pro.id}`} className="proLink">
+                <Link to={`/${pro.id}`} className="proLink">
                   <div>
                     <img className="proImage" src={pro.image} />
                   </div>

@@ -346,7 +346,7 @@ var Contact = /*#__PURE__*/function (_Component) {
 /*!************************************!*\
   !*** ./client/components/index.js ***!
   \************************************/
-/*! exports provided: Navbar, UserHome, AboutMe, Contact, Projects, Resume */
+/*! exports provided: Navbar, UserHome, AboutMe, Contact, Projects, Resume, SingleProject */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -369,11 +369,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _resume__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./resume */ "./client/components/resume.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Resume", function() { return _resume__WEBPACK_IMPORTED_MODULE_5__["default"]; });
 
+/* harmony import */ var _singleProject__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./singleProject */ "./client/components/singleProject.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SingleProject", function() { return _singleProject__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+
 /**
  * `components/index.js` exists simply as a 'central export' for our components.
  * This way, we can import all of our components from the same place, rather than
  * having to figure out which file they belong to!
  */
+
 
 
 
@@ -534,7 +538,7 @@ var Projects = /*#__PURE__*/function (_Component) {
           key: pro.id,
           className: "allprojectSingle"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-          to: "/projects/".concat(pro.id),
+          to: "/".concat(pro.id),
           className: "proLink"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           className: "proImage",
@@ -639,6 +643,110 @@ var Resume = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 
+
+/***/ }),
+
+/***/ "./client/components/singleProject.js":
+/*!********************************************!*\
+  !*** ./client/components/singleProject.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_project__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/project */ "./client/store/project.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+var SingleProject = /*#__PURE__*/function (_React$Component) {
+  _inherits(SingleProject, _React$Component);
+
+  var _super = _createSuper(SingleProject);
+
+  function SingleProject(props) {
+    _classCallCheck(this, SingleProject);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(SingleProject, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchSingleProject(this.props.match.params.id);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var single = this.props.single;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, single && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        className: "proImageSin",
+        width: "560",
+        height: "315",
+        src: single.video,
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "proTitleSin"
+      }, single.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "proTitleSin"
+      }, "Dates:", single.dates), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "proShortSin"
+      }, "My Role: ", single.role), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "proShortSin"
+      }, "Technology Used: ", single.technology), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "proShortSin"
+      }, "About: ", single.longDescription)));
+    }
+  }]);
+
+  return SingleProject;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapState = function mapState(state) {
+  return {
+    single: state.project.single
+  };
+};
+
+var mapDispatch = function mapDispatch(dispatch) {
+  return {
+    fetchSingleProject: function fetchSingleProject(id) {
+      return dispatch(Object(_store_project__WEBPACK_IMPORTED_MODULE_2__["fetchSingleProject"])(id));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapState, mapDispatch)(SingleProject));
 
 /***/ }),
 
@@ -810,17 +918,25 @@ var Routes = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        exact: true,
         path: "/aboutme",
         component: _components__WEBPACK_IMPORTED_MODULE_4__["AboutMe"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        exact: true,
         path: "/contact",
         component: _components__WEBPACK_IMPORTED_MODULE_4__["Contact"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        exact: true,
         path: "/projects",
         component: _components__WEBPACK_IMPORTED_MODULE_4__["Projects"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        exact: true,
         path: "/resume",
         component: _components__WEBPACK_IMPORTED_MODULE_4__["Resume"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        exact: true,
+        path: "/:id",
+        component: _components__WEBPACK_IMPORTED_MODULE_4__["SingleProject"]
       }));
     }
   }]);
@@ -928,13 +1044,15 @@ var store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(reducer, m
 /*!*********************************!*\
   !*** ./client/store/project.js ***!
   \*********************************/
-/*! exports provided: fetchProjects, default */
+/*! exports provided: addSingleProject, fetchProjects, fetchSingleProject, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addSingleProject", function() { return addSingleProject; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchProjects", function() { return fetchProjects; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return fridgeReducer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSingleProject", function() { return fetchSingleProject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return projectReducer; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -949,6 +1067,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 var GET_PROJECTS = 'GET_PROJECTS';
+var SINGLE_PROJECT = 'SINGLE_PROJECT';
 
 var addProjects = function addProjects(project) {
   return {
@@ -957,6 +1076,12 @@ var addProjects = function addProjects(project) {
   };
 };
 
+var addSingleProject = function addSingleProject(single) {
+  return {
+    type: SINGLE_PROJECT,
+    single: single
+  };
+};
 var fetchProjects = function fetchProjects() {
   return /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(dispatch) {
@@ -995,10 +1120,49 @@ var fetchProjects = function fetchProjects() {
     };
   }();
 };
-var initialState = {
-  project: []
+var fetchSingleProject = function fetchSingleProject(id) {
+  return /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(dispatch) {
+      var _yield$axios$get2, data;
+
+      return regeneratorRuntime.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.prev = 0;
+              _context2.next = 3;
+              return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/projects/".concat(id));
+
+            case 3:
+              _yield$axios$get2 = _context2.sent;
+              data = _yield$axios$get2.data;
+              dispatch(addSingleProject(data));
+              _context2.next = 11;
+              break;
+
+            case 8:
+              _context2.prev = 8;
+              _context2.t0 = _context2["catch"](0);
+              dispatch(console.error(_context2.t0));
+
+            case 11:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2, null, [[0, 8]]);
+    }));
+
+    return function (_x2) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
 };
-function fridgeReducer() {
+var initialState = {
+  project: [],
+  single: {}
+};
+function projectReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
@@ -1006,6 +1170,11 @@ function fridgeReducer() {
     case GET_PROJECTS:
       return _objectSpread(_objectSpread({}, state), {}, {
         project: action.project
+      });
+
+    case SINGLE_PROJECT:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        single: action.single
       });
 
     default:
