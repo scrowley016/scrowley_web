@@ -8,15 +8,15 @@ const Project = db.define('project', {
     allowNull: false
   },
   technology: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false
   },
   shortDescription: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false
   },
   longDescription: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false
   },
   dates: {
@@ -24,7 +24,7 @@ const Project = db.define('project', {
     allowNull: false
   },
   role: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false
   },
   linkGithub: {
@@ -38,6 +38,9 @@ const Project = db.define('project', {
   image: {
     type: Sequelize.STRING,
     allowNull: false
+  },
+  video: {
+    type: Sequelize.STRING
   }
 })
 
