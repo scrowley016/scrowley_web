@@ -14,22 +14,26 @@ export class Projects extends Component {
     console.log(this.props)
     return (
       <div>
-        <h2>Projects Page</h2>
-        <div className="allPro">
-          {this.props.project &&
-            this.props.project.map(pro => (
-              <div key={pro.id} className="allprojectSingle">
-                <Link to={`/${pro.id}`} className="proLink">
-                  <div>
-                    <img className="proImage" src={pro.image} />
+        <div className="stars">
+          <div className="twinkling">
+            <h2>Projects Page</h2>
+            <div className="allPro">
+              {this.props.project &&
+                this.props.project.map(pro => (
+                  <div key={pro.id} className="allprojectSingle">
+                    <Link to={`/${pro.id}`} className="proLink">
+                      <div>
+                        <img className="proImage" src={pro.image} />
+                      </div>
+
+                      <div className="proTitle">{pro.title}</div>
+
+                      <div className="proShort">{pro.shortDescription}</div>
+                    </Link>
                   </div>
-
-                  <div className="proTitle">{pro.title}</div>
-
-                  <div className="proShort">{pro.shortDescription}</div>
-                </Link>
-              </div>
-            ))}
+                ))}
+            </div>
+          </div>
         </div>
       </div>
     )
