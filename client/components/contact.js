@@ -22,9 +22,9 @@ export default class Contact extends Component {
   }
   handleSubmit = async event => {
     event.preventDefault()
-    const {addFood} = this.props
-    const food = this.state
-    await addFood(food)
+    const {sendInfo} = this.props
+    const data = this.state
+    await sendInfo(data)
     this.setState({
       name: '',
       email: '',
@@ -40,7 +40,7 @@ export default class Contact extends Component {
             <h2>Contact Page</h2>
             <h3> Please fill out the form below</h3>
           </div>
-          <div className="container">
+          <div className="containerContact">
             <div>
               <form onSubmit={this.handleSubmit}>
                 <div>
@@ -72,7 +72,9 @@ export default class Contact extends Component {
                     />
                   </div>
                 </div>
-                <button type="submit">send</button>
+                <button type="submit" onClick={this.handleSubmit}>
+                  send
+                </button>
               </form>
             </div>
           </div>
